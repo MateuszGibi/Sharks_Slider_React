@@ -1,0 +1,257 @@
+@import "./index.scss";
+.SliderDiv{
+    height: calc(100vh - $MenuHeight);  
+    width: 100vw;
+    color: #FFFFFF;
+    
+    transition-property: background-image;
+    transition-duration: 300ms;
+    transition-timing-function:ease-in;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.BackgroundDiv{
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ContentWrapper{
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    flex-wrap: wrap;
+
+    h1{
+        font-family: WorkSansBold;
+        font-size: 60px;
+        letter-spacing: 2.64px;
+        color: #FFFFFF;
+
+        @media screen and (max-width: 1050px){
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 360px){
+            font-size: 30px;
+        }
+    }
+
+    h2{
+        font-family: WorkSansLight;
+        font-size: 44px;
+        letter-spacing: 1.94px;
+        color: #FFFFFF;
+        padding-left: 50px;
+
+        @media screen and (max-width: 1050px){
+            font-size: 24px;
+        }
+    }
+
+    p{
+        max-height: 20vh;
+        width: 85%;
+        
+        color: #FFFFFF;
+        font-family: BorlowRegular;
+        font-size: 18px;
+        text-align: justify;
+        text-justify: distribute-all-lines;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        letter-spacing: 0.72px;
+        line-height: 35px;
+
+        @media screen and (max-width: 1050px){
+            width: 100%;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        width: 90%;
+    }
+}
+
+.TitleWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    row-gap: 4vh;
+}
+
+.SliderButtonsDiv{
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.SliderButton{
+    height: 12px;
+    width: 12px;
+
+    margin-right: 10px;
+
+    border: 0px;
+    border-radius: 50%;
+
+    background-color: #FFF;
+    opacity: 0.15;
+
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+
+    &:hover{
+        height: 16px;
+        width: 16px;
+
+        opacity: 1;
+    }
+
+    &:focus{
+        height: 16px;
+        width: 16px;
+
+        outline: none;
+        opacity: 1;
+    }
+}
+
+.LoadingBar{
+    height: 2px;
+    width: 40%;
+    background-color: #FFF;
+}
+
+@keyframes LoadingAnim {
+    from{ width: 0%;}
+    to{ width: 100%;}
+}
+
+
+#LoadingBar{
+    height: 100%;
+    max-width: 100%;
+    width: 0%;
+    background-color: $Green;
+
+    animation: LoadingAnim;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.ButtonWrapper{
+    height: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 600px){
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1vh;
+    }
+}
+
+.SlideBtn{
+    
+    border: 2px solid $Green;
+    border-radius: 7px;
+    background-color: rgba($color: #FFFFFF, $alpha: 0);
+    
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: BorlowRegular;
+
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.SlideBtn1{
+    height: 59px;
+    width: 244px;
+
+    background-color: $Green;
+
+    &:hover{
+        color: $Green;
+        background-color: rgba($color: #FFFFFF, $alpha: 0);
+    }
+
+    @media screen and (max-width: 1050px){
+        width: 204px;
+    }
+    
+    @media screen and (max-width: 600px){
+        order: 1;
+    }
+
+}
+
+.SlideBtn2{
+    height: 59px;
+    width: 267px;
+
+    margin-left: 30px;
+
+    &:hover{
+        background-color: $Green;
+    }
+
+    @media screen and (max-width: 1050px){
+        width: 227px;
+    }
+
+    @media screen and (max-width: 600px){
+        margin-left: 0px;
+        order: 0;
+    }
+}
+
+.SignatureDiv{
+    height: 5.5%;
+    border-left: 2px solid #FFFFFF;
+    
+    
+    align-self: flex-end;
+    position: absolute;
+
+    p{
+        height: auto;
+        width: auto;
+        font-size: 16px;
+        margin-left: 30px;
+        line-height: normal;
+
+        @media screen and (max-width: 1050px){
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        display: none;
+    }
+}

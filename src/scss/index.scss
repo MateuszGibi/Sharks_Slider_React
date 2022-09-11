@@ -1,0 +1,32 @@
+//Global
+$MenuHeight: 10vh;
+
+//Collor Pallete
+$MenuBGColor: #ECECEC;
+$MenuColor: #DADADA;
+$Green: #2ECC71;
+
+//Fonts
+@font-face {
+    font-family: WorkSansBold;
+    src: url('../../public/fonts/WorkSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: WorkSansLight;
+    src: url('../../public/fonts/WorkSans-Light.ttf');
+}
+
+@font-face {
+    font-family: BorlowRegular;
+    src: url('../../public/fonts/Barlow-Regular.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+
+    
+     
+    font-family: BorlowRegular;
+}

@@ -1,0 +1,18 @@
+@import "./index.scss";
+
+.MenuDiv{
+    height: $MenuHeight;
+    width: 100vw;
+
+    background-color: $MenuBGColor;
+    color: $MenuColor;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-family: WorkSansBold;
+    }
+}
+
